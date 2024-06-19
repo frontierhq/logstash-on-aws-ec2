@@ -23,7 +23,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          python_version=$(grep python_version ${GITHUB_WORKSPACE}/Pipfile | cut -d "=" -f2 | sed 's/"//g'))
+          python_version=$(grep python_version ${GITHUB_WORKSPACE}/Pipfile | cut -d "=" -f2 | sed 's/"//g')
           echo "Python version: ${python_version}"
           echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v4
